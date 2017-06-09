@@ -26,4 +26,4 @@ When the image is pulled or built it can be run by:
 
 If the state directory (~/.Tribler) needs to be preserved or altered, it can be mapped to the container by adding `-v <absolute location to the state folder>:/home/tribler/.Tribler`
 
-In the running Tribler can be executed by running `./code/tribler.sh`
+In the running container Tribler can be executed by running `./code/tribler.sh`
