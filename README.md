@@ -25,3 +25,5 @@ When the image is pulled or built it can be run by:
 `sudo docker run -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY --name tribler-dev -p 8085:8085 -v <absolute location to the tribler repo>:/home/tribler/code tribler/tribler-dev`
 
 If the state directory (~/.Tribler) needs to be preserved or altered, it can be mapped to the container by adding `-v <absolute location to the state folder>:/home/tribler/.Tribler`
+
+In the running Tribler can be executed by running `./code/tribler.sh`
