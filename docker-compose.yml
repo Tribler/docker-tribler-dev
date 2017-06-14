@@ -6,8 +6,6 @@ services:
         #build: .    
         image: tribler/tribler-dev
         container_name: tribler-dev
-        devices:
-            - "/dev/ttyUSB0:/dev/ttyUSB0"
         environment:
             - DISPLAY=unix$DISPLAY
         ports:
