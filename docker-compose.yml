@@ -1,0 +1,20 @@
+version: "2"
+services:
+    tribler:
+        # Uncomment build and comment image
+        # For building from the repository
+        #build: .    
+        image: tribler/tribler-dev
+        container_name: tribler-dev
+        devices:
+            - "/dev/ttyUSB0:/dev/ttyUSB0"
+        environment:
+            - DISPLAY=unix$DISPLAY
+        ports:
+            - "8085:8085"
+        volumes:
+            - /tmp/.X11-unix:/tmp/.X11-unix
+            - <absolute path to host folder>:/home/tribler/code
+            # Uncomment next line for preserving state folder
+            #- <absolute path to host folder>:/home/tribler/.Tribler
+
