@@ -30,7 +30,7 @@ sudo docker run -it --rm \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -e DISPLAY=unix$DISPLAY \
 -v <absolute location to the tribler repo>:/home/tribler/code \
-tribler/tribler-dev
+tribler/docker-tribler-dev
 ```
 
 If the state directory (~/.Tribler) needs to be preserved or altered, it can be mapped to the container by adding 
