@@ -23,7 +23,7 @@ git clone https://github.com/Tribler/docker-tribler-dev.git
 docker build -t tribler/docker-tribler-dev docker-tribler-dev
 ```
 
-When the image is pulled or built it can be run by:
+When the image is pulled or built, it can be run by executing this command:
 
 ```shell
 sudo docker run -it --rm \
