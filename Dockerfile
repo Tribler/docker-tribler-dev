@@ -6,6 +6,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Installing dependencies and cleaning up afterwards
 RUN apt-get update && apt-get install -y --no-install-recommends \
+# Build depenedencies
+    python-setuptools \
+    python-pip \
+# Tribler dependencies
     libav-tools \
     libsodium18 \
     libx11-6 \
@@ -17,18 +21,36 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python-crypto \
     python-cryptography \
     python-decorator \
+    python-dnspython \
+    python-ecdsa \
     python-feedparser \
+    python-jsonrpclib \
+    python-keyring \
+    python-keyrings.alt \
     python-leveldb \
+    python-libnacl \
     python-libtorrent \
     python-matplotlib \
     python-m2crypto \
     python-netifaces \
+    python-networkx \
+    python-pbkdf2 \
     python-pil \
+    python-protobuf \
     python-pyasn1 \
     python-pyqt5 \
     python-pyqt5.qtsvg \
+    python-requests \
+    python-scipy \
+    python-socks \
     python-twisted \
     vlc \
+    && pip install pyaes \
+# Cleanup
+    && apt-get remove -y \
+    python-setuptools \
+    python-pip \
+    && apt-get autoremove -y \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV HOME /home/tribler
