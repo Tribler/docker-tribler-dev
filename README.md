@@ -9,7 +9,7 @@ Currently this docker image only works on linux/unix machines, because of the wa
 To make use of this image, first clone the tribler/tribler repository or your own fork somewhere on your computer:
 
 ```shell
-git clone --recursive https://github.com/Tribler/tribler.git`
+git clone --recursive https://github.com/Tribler/tribler.git
 ```
 
 Then pull this image from docker hub:
