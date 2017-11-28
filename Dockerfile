@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Installing dependencies and cleaning up afterwards
 RUN apt-get update && apt-get install -y --no-install-recommends \
 # Build depenedencies
-    python-setuptools \
+    python-setuptools \ 
     python-pip \
 # Tribler dependencies
     libav-tools \
@@ -31,6 +31,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python-libnacl \
     python-libtorrent \
     python-matplotlib \
+    python-meliae \
     python-m2crypto \
     python-netifaces \
     python-networkx \
@@ -40,9 +41,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python-pyasn1 \
     python-pyqt5 \
     python-pyqt5.qtsvg \
+    python-psutil \
     python-requests \
     python-scipy \
     python-socks \
+    python-tk \
     python-twisted \
     vlc \
     && pip install pyaes \
